@@ -4,16 +4,18 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class GardeningJavaApp extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainWindow.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        stage.setTitle("Gardening Planner");
+        stage.setScene(new Scene(root));
+        stage.getIcons().add(new Image("/ico/Gardening-32.png"));
+        stage.show();
     }
 
 
